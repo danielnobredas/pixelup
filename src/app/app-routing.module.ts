@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    data: { page: 'home' }
+    data: { page: '' }
   },
   {
     path: '**',

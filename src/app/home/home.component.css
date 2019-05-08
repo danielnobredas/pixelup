@@ -13,6 +13,7 @@ a {
 
 .container {
     background-image: linear-gradient(to right bottom, #f2154f, #f53242, #f64735, #f55a26, #f26b15);
+    /* animation: gradient 15s ease alternate infinite; */
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -135,6 +136,16 @@ a {
     user-select: none;
     /* Non-prefixed version, currently
                                     supported by Chrome and Opera */
+}
+
+@keyframes gradient {
+    from {
+        background-position: 0% 0%;
+    } 
+    to {
+        background-position: 100% 100%;
+
+    }
 }
 
 @keyframes opacity {

@@ -1,5 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
-
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@font-face {
+    font-family: 'Teko';
+    src: url('assets/fonts/Teko-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'UACadet';
+    src: url('assets/fonts/UA-Cadet.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Mplus';
+    src: url('assets/fonts/MPLUSRounded1c-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 html body {
     margin: 0;
     padding: 0;

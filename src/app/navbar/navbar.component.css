@@ -1,0 +1,57 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: 4rem;
+  width: 100%;
+  padding: 0 10%;
+  background: linear-gradient(to right bottom, rgba(255, 49, 2, 1) 0%, #fe6601 100%);
+  align-items: center;
+  z-index: 5;
+}
+
+.navbar img {
+  margin: 0;
+  height: 100%;
+  outline:none;
+  cursor: pointer;
+}
+
+.links {
+  font-family: 'UACadet';
+  color: #fff;
+  margin: 0 1em;
+  display: flex;
+  flex-direction: row;
+}
+
+.links span {
+  margin: 0 0.6em;
+  outline:none;
+  transition: 200ms;
+  transform-origin: center;
+  transform: scale(1);
+}
+
+.links span:hover, .links .active {
+  transition: 300ms;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.links span::before {
+  transition: 100ms;
+  transform-origin: center;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  transform: scaleX(0);
+}
+
+.links span:hover::before, .links .active::before {
+  transition: 300ms;
+  transform: scaleX(1);
+}

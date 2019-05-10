@@ -20,11 +20,19 @@ export class PodcastListComponent implements OnInit {
     .subscribe(data => {
       this.episodeList = data['collection'];
       this.episodeList.forEach(episode => {
-        this.podcastService.getEpisodeDownload(episode.analytics.href)
-        .subscribe(datas => {
-          Object.assign(episode, { downloads : datas['total']});
-        });
+        if (episode.published_at) {
+          this.podcastService.getEpisodeDownload(episode.analytics.href)
+          .subscribe(datas => {
+            Object.assign(episode, { downloads : datas['total']});
+          });
+        }
       });
     });
+
+
+    console.log(this.episodeList);
+  }
+  checkEpisode(episode) {
+    return episode.published_at !== undefined;
   }
 }

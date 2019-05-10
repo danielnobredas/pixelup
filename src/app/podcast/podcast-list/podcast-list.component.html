@@ -1,22 +1,25 @@
-<mat-card *ngFor="let episode of episodeList" class="episode">
-  <div class="episode-image">
-    <img [src]="episode.image_url" alt="">
-  </div>
-  <div class="episode-text">
-    <mat-card-header>
-      <mat-card-title>{{ episode.number  + ' ' + episode.title }}</mat-card-title>
-      <mat-card-subtitle >
-        <mat-icon matTooltip="Data de publicação" matTooltipPosition="after" [inline]="true">calendar_today</mat-icon>
-        {{ episode.published_at| date: fullDate }}
-        <mat-icon matTooltip="Número de visualizações" matTooltipPosition="after" [inline]="true">visibility</mat-icon>
-        {{ episode.downloads }}
-      </mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      {{ episode.description }}
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>Ok</button>
-    </mat-card-actions>
-  </div>
-</mat-card>
+<div *ngFor="let episode of episodeList">
+  <mat-card class="episode" *ngIf="episode.published_at">
+    <div class="episode-image">
+      <img [src]="episode.image_url" alt="">
+    </div>
+    <div class="episode-text">
+      <mat-card-header>
+        <mat-card-title>{{ episode.number  + ' ' + episode.title }}</mat-card-title>
+        <mat-card-subtitle>
+          <mat-icon matTooltip="Data de publicação" matTooltipPosition="after" [inline]="true">calendar_today</mat-icon>
+          {{ episode.published_at| date: fullDate }}
+          <mat-icon matTooltip="Número de visualizações" matTooltipPosition="after" [inline]="true">visibility
+          </mat-icon>
+          {{ episode.downloads }}
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        {{ episode.description }}
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Ok</button>
+      </mat-card-actions>
+    </div>
+  </mat-card>
+</div>

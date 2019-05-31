@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PodcastService } from '../podcast.service';
 
 @Component({
@@ -8,11 +8,16 @@ import { PodcastService } from '../podcast.service';
 })
 export class PodcastListComponent implements OnInit {
 
+  @Output() recentEpisode = new EventEmitter();
+
   constructor(private podcastService: PodcastService) {}
   episodeList;
 
   ngOnInit() {
     this.getEpisodes();
+  }
+
+  selectEpisode() {
   }
 
   getEpisodes() {
@@ -27,10 +32,8 @@ export class PodcastListComponent implements OnInit {
           });
         }
       });
+      this.recentEpisode.emit(this.episodeList[0]);
     });
-
-
-    console.log(this.episodeList);
   }
   checkEpisode(episode) {
     return episode.published_at !== undefined;

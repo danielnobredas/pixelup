@@ -1,8 +1,11 @@
 <div class="container">
-  <div class="podcast-active">
+  <div *ngIf="episode" [style.background-image]="'url(' + episode.image_url + ')'" class="podcast-active">
+    <div class="content">
+      <h2 class="titulo">Episódio mais recente</h2>
+    </div>
   </div>
   <div class="podcast-list">
     <h2 class="titulo">Todos os episódios</h2>
-    <app-podcast-list></app-podcast-list>
+    <app-podcast-list (recentEpisode)="recentEpisode($event)"></app-podcast-list>
   </div>
 </div>

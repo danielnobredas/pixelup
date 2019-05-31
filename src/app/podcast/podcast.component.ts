@@ -7,9 +7,16 @@ import { PodcastService } from './podcast.service';
   styleUrls: ['./podcast.component.css']
 })
 export class PodcastComponent implements OnInit {
+  episode;
 
   constructor() {}
 
-  ngOnInit() {  }
+  ngOnInit() {
+  }
+
+  recentEpisode(event) {
+    this.episode = event;
+  }
+
 
 }

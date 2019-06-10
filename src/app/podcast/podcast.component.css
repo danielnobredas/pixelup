@@ -1,37 +1,37 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-}
+/*.container {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  width: 100%;*/
+/*  align-items: center;*/
+/*}*/
 
-.titulo {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: #dd6d22;
-}
+/*.titulo {*/
+/*  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
+/*  color: #dd6d22;*/
+/*}*/
 
-.podcast-list {
-  width: 80%;
-}
+/*.podcast-list {*/
+/*  width: 80%;*/
+/*}*/
 
-.podcast-active {
-  width: 100%;
-  height: 31.250em;
-  background-position: center center;
-  background-blend-mode: darken;
-  background-repeat: no-repeat;
-  color: white;
-}
+/*.podcast-active {*/
+/*  width: 100%;*/
+/*  height: 31.250em;*/
+/*  background-position: center center;*/
+/*  background-blend-mode: darken;*/
+/*  background-repeat: no-repeat;*/
+/*  color: white;*/
+/*}*/
 
-.content {
-  display: inline-block;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  padding: 0 10%;
-  background-color: #0000009d;
-}
+/*.content {*/
+/*  display: inline-block;*/
+/*  top: 0;*/
+/*  height: 100%;*/
+/*  width: 100%;*/
+/*  padding: 0 10%;*/
+/*  background-color: #0000009d;*/
+/*}*/
 
-.content h2 {
-  color: #ededed;
-}
+/*.content h2 {*/
+/*  color: #ededed;*/
+/*}*/

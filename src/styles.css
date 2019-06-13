@@ -1,26 +1,5 @@
-/*@import "~@angular/material/prebuilt-themes/indigo-pink.css";*/
-/*@font-face {*/
-/*    font-family: 'Teko';*/
-/*    src: url('assets/fonts/Teko-Light.ttf');*/
-/*    font-weight: normal;*/
-/*    font-style: normal;*/
-/*}*/
-/*@font-face {*/
-/*    font-family: 'UACadet';*/
-/*    src: url('assets/fonts/UA-Cadet.ttf');*/
-/*    font-weight: normal;*/
-/*    font-style: normal;*/
-/*}*/
-/*@font-face {*/
-/*    font-family: 'Mplus';*/
-/*    src: url('assets/fonts/MPLUSRounded1c-Light.ttf');*/
-/*    font-weight: normal;*/
-/*    font-style: normal;*/
-/*}*/
-/*html body {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    max-width: 100vw;*/
-/*    min-height: 100%;*/
-/*    overflow-x: hidden;*/
-/*}*/
+.bg-gradient-pixel-up {
+  background-image: linear-gradient(to right, #F63952, #FF8A36);
+}
+
+

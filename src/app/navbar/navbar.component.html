@@ -1,9 +1,20 @@
-<div class="navbar">
-    <img [routerLink]="[ '/home' ]" src="assets/images/PixelUpLogo.png" class="puff-in-center noselect" alt="Logo" id="logo">
-    <div class="links">
-      <span [routerLink]="[ '/podcast' ]" routerLinkActive="active">PODCAST</span>
-      <span [routerLink]="[ '/blog' ]" routerLinkActive="active">BLOG</span>
-      <span [routerLink]="[ '/sobre' ]" routerLinkActive="active">SOBRE</span>
-      <span [routerLink]="[ '/contato' ]" routerLinkActive="active">CONTATO</span>
+<nav class="navbar navbar-dark bg-gradient-pixel-up navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="[ '/home' ]">
+      <img src="assets/images/PixelUpLogo.png" width="30" height="30" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" [routerLink]="[ '/podcast' ]" routerLinkActive="active">PODCAST</a>
+        <a class="nav-item nav-link" [routerLink]="[ '/blog' ]" routerLinkActive="active">BLOG</a>
+        <a class="nav-item nav-link" [routerLink]="[ '/sobre' ]" routerLinkActive="active">SOBRE</a>
+        <a class="nav-item nav-link" [routerLink]="[ '/contato' ]" routerLinkActive="active">CONTATO</a>
+      </div>
     </div>
-</div>
+  </div>
+</nav>

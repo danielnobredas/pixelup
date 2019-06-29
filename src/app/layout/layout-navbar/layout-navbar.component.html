@@ -1,7 +1,12 @@
-<nav class="navbar navbar-expand-lg align-items-lg-center container-p-x" [ngClass]="currentBg()">
+<nav class="navbar navbar-expand-lg bg-gradient-pixel-up align-items-lg-center container-p-x" [ngClass]="currentBg()">
 
   <!-- Brand -->
-  <a routerLink="/" class="navbar-brand">Angular Starter</a>
+  <div class="app-brand">
+    <a [routerLink]="[ '/' ]" class="navbar-brand">
+      <img src="assets/images/PixelUpLogo.png" alt="" class="app-brand-logo ui-w-40">
+    </a>
+  </div>
+  <!-- / Brand -->
 
   <!-- Sidenav toggle -->
   <div class="navbar-nav align-items-lg-center mr-auto mr-lg-4" *ngIf="sidenavToggle">
@@ -16,9 +21,31 @@
   </button>
 
   <div class="navbar-collapse collapse" [ngbCollapse]="!isExpanded">
-    <div class="navbar-nav align-items-lg-center">
-      <div class="nav-item"><a class="nav-link" href="#">Link 1</a></div>
-      <div class="nav-item"><a class="nav-link" href="#">Link 2</a></div>
+    <div class="navbar-nav align-items-lg-right">
+      <div class="nav-item">
+        <a class="nav-link" [routerLink]="[ '/podcast' ]" routerLinkActive="active">PODCAST</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" [routerLink]="[ '/cinema' ]" routerLinkActive="active">CINEMA</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" [routerLink]="[ '/' ]" routerLinkActive="active">SÉRIES</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" [routerLink]="[ '/' ]" routerLinkActive="active">JOGOS</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" [routerLink]="[ '/' ]" routerLinkActive="active">HQs</a>
+      </div>
+      <div class="nav-item" ngbDropdown>
+        <a class="nav-link" ngbDropdownToggle>USER</a>
+        <div ngbDropdownMenu>
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
     </div>
   </div>
 

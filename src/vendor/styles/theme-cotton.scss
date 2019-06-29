@@ -4,6 +4,7 @@
 @import "./_theme/uikit";
 
 $primary-color: #e84c64;
+$secondary-color: #FEB744;
 $body-bg: #f5f5f5;
 
 body {
@@ -20,7 +21,7 @@ body {
 
 // Navbar
 
-@include appwork-navbar-variant('.bg-navbar-theme', #fff, $color: $text-muted, $active-color: $body-color);
+@include appwork-navbar-variant('.bg-navbar-theme', #fff, $color: $text-lightest, $active-color: $white);
 
 .layout-navbar {
   box-shadow: 0 0 10px rgba($black, .05);
@@ -108,4 +109,8 @@ hr {
 .nav-tabs-left > div > .nav-tabs:not(.tabs-alt) {
   padding-top: $border-width;
   padding-bottom: $border-width;
+}
+
+.bg-gradient-pixel-up {
+  background-image: linear-gradient(to right, #F63952, #FF8A36);
 }

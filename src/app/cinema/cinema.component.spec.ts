@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SobreComponent } from './sobre.component';
+import { CinemaComponent } from './cinema.component';
 
-describe('SobreComponent', () => {
-  let component: SobreComponent;
-  let fixture: ComponentFixture<SobreComponent>;
+describe('CinemaComponent', () => {
+  let component: CinemaComponent;
+  let fixture: ComponentFixture<CinemaComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SobreComponent ]
+      declarations: [ CinemaComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SobreComponent);
+    fixture = TestBed.createComponent(CinemaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

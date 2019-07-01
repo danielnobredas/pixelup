@@ -83,6 +83,7 @@
     "quill": "~1.3.6",
     "rxjs": "~6.4.0",
     "rxjs-compat": "^6.4.0",
+    "safe-pipe": "^0.3.0",
     "sortablejs": "~1.8.4",
     "spinkit": "~1.2.5",
     "sweetalert2": "~8.7.0",

@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LayoutWithoutSidenavComponent } from './layout/layout-without-sidenav/layout-without-sidenav.component';
 import { HomeComponent } from './home/home.component';
-import { PodcastComponent } from './podcast/podcast.component';
+import { PodcastListComponent } from './podcast/podcast-list/podcast-list.component';
 import { PodcastDetailsComponent } from './podcast/podcast-details/podcast-details.component';
 import { CinemaComponent } from './cinema/cinema.component';
 
@@ -14,7 +14,7 @@ const routes: Routes = [
     ]
   },
   { path: 'podcast', component: LayoutWithoutSidenavComponent, children: [
-      { path: '', component: PodcastComponent },
+      { path: '', component: PodcastListComponent },
       { path: 'podcast/:slug', component: PodcastDetailsComponent}
     ]
   },

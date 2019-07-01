@@ -1,5 +1,6 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {PodcastService} from '../podcast.service';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { PodcastService } from '../podcast.service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-podcast-list',
@@ -10,7 +11,7 @@ export class PodcastListComponent implements OnInit {
 
   @Output() recentEpisode = new EventEmitter();
 
-  constructor(private podcastService: PodcastService) {}
+  constructor(private podcastService: PodcastService, private domSanitizer: DomSanitizer) {}
 
   episodeList;
 

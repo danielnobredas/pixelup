@@ -14,8 +14,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LOCALE_ID } from '@angular/core';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
-import {AppService} from './app.service';
+import { AppService } from './app.service';
 import { CinemaComponent } from './cinema/cinema.component';
+import { SafePipeModule } from 'safe-pipe';
 
 registerLocaleData(localePt);
 
@@ -34,7 +35,8 @@ registerLocaleData(localePt);
     AppRoutingModule,
     LayoutModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SafePipeModule
   ],
   providers: [
           { provide: LOCALE_ID, useValue: 'pt' },

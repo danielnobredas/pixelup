@@ -35,17 +35,20 @@
         <a class="nav-link" [routerLink]="[ '/blog/games' ]" routerLinkActive="active">JOGOS</a>
       </div>
       <div class="nav-item">
-        <a class="nav-link" [routerLink]="[ '/' ]" routerLinkActive="active">HQs</a>
+        <a class="nav-link" [routerLink]="[ '/blog/hqs' ]" routerLinkActive="active">HQs</a>
       </div>
-      <div class="nav-item" ngbDropdown>
-        <a class="nav-link" ngbDropdownToggle>USER</a>
-        <div ngbDropdownMenu>
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+      <div class="nav-item">
+        <a class="nav-link" [routerLink]="[ '/' ]" routerLinkActive="active">SOBRE</a>
       </div>
+<!--      <div class="nav-item" ngbDropdown>-->
+<!--        <a class="nav-link" ngbDropdownToggle>USER</a>-->
+<!--        <div ngbDropdownMenu>-->
+<!--          <a class="dropdown-item" href="#">Action</a>-->
+<!--          <a class="dropdown-item" href="#">Another action</a>-->
+<!--          <div class="dropdown-divider"></div>-->
+<!--          <a class="dropdown-item" href="#">Something else here</a>-->
+<!--        </div>-->
+<!--      </div>-->
     </div>
   </div>
 

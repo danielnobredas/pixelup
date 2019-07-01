@@ -19,6 +19,7 @@ import { SafePipeModule } from 'safe-pipe';
 import { MediumComponent } from './medium/medium.component';
 import { SeriesComponent } from './medium/series/series.component';
 import { GamesComponent } from './medium/games/games.component';
+import { HqsComponent } from './medium/hqs/hqs.component';
 
 registerLocaleData(localePt);
 
@@ -33,6 +34,7 @@ registerLocaleData(localePt);
     MediumComponent,
     SeriesComponent,
     GamesComponent,
+    HqsComponent,
   ],
   imports: [
     BrowserModule,

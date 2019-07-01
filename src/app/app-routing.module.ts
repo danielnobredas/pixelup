@@ -7,6 +7,7 @@ import { PodcastListComponent } from './podcast/podcast-list/podcast-list.compon
 import { PodcastDetailsComponent } from './podcast/podcast-details/podcast-details.component';
 import { CinemaComponent } from './medium/cinema/cinema.component';
 import { SeriesComponent } from './medium/series/series.component';
+import { GamesComponent } from './medium/games/games.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'blog', component: LayoutWithoutSidenavComponent, children: [
       { path: 'cinema', component: CinemaComponent },
       { path: 'series', component: SeriesComponent},
+      { path: 'games', component: GamesComponent},
     ]
   },
 ];

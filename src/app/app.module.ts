@@ -18,6 +18,7 @@ import { CinemaComponent } from './medium/cinema/cinema.component';
 import { SafePipeModule } from 'safe-pipe';
 import { MediumComponent } from './medium/medium.component';
 import { SeriesComponent } from './medium/series/series.component';
+import { GamesComponent } from './medium/games/games.component';
 
 registerLocaleData(localePt);
 
@@ -31,6 +32,7 @@ registerLocaleData(localePt);
     CinemaComponent,
     MediumComponent,
     SeriesComponent,
+    GamesComponent,
   ],
   imports: [
     BrowserModule,

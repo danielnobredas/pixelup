@@ -1,0 +1,89 @@
+<!-- Nav -->
+<nav class="navbar navbar-expand-lg bg-white">
+  <div class="container px-3">
+
+    <a [routerLink]="[ '/' ]"
+       class="navbar-brand order-lg-2 flex-shrink-0 text-xlarge font-weight-bolder line-height-1 py-3 mr-0">
+      <img src="assets/images/pixelup_logo_small.png" class="img-fluid ui-w-50" alt="Pixel Up logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".blog-nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="blog-nav navbar-collapse collapse order-lg-1 w-lg-100">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link"
+           href="https://twitter.com/portalpixelup" target="_blank">
+          <i class="ion ion-logo-twitter text-twitter text-big align-middle"></i>
+          <span class="d-lg-none align-middle">&nbsp; Twitter</span>
+        </a>
+        <a class="nav-item nav-link ml-lg-2"
+           href="https://instagram.com/portalpixelup" target="_blank">
+          <i class="ion ion-logo-instagram text-instagram text-big align-middle"></i>
+          <span class="d-lg-none align-middle">&nbsp; Instagram</span>
+        </a>
+        <a class="nav-item nav-link ml-lg-2"
+           href="https://medium.com/portalpixelup" target="_blank">
+          <i class="fab fa-medium-m text-instagram text-big align-middle"></i>
+          <span class="d-lg-none align-middle">&nbsp; Medium</span>
+        </a>
+        <a class="nav-item nav-link ml-lg-2"
+           href="https://www.youtube.com/channel/UCxRmse4PuDBkTj6H_8IpSCw" target="_blank">
+          <i class="ion ion-logo-youtube text-youtube text-big align-middle"></i>
+          <span class="d-lg-none align-middle">&nbsp; YouTube</span>
+        </a>
+        <a class="nav-item nav-link ml-lg-2"
+           href="https://open.spotify.com/show/2CcnAR7T1EscDZobJWYqKF?si=jt2IUL-3TRqgaBWJa4Quog" target="_blank">
+          <i class="fab fa-spotify text-spotify text-big align-middle"></i>
+          <span class="d-lg-none align-middle">&nbsp; Spotify</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="blog-nav navbar-collapse collapse order-lg-3 w-lg-100">
+      <div class="nav navbar-nav align-items-lg-center ml-lg-auto">
+        <!-- Search -->
+        <label class="nav-item nav-link navbar-search-box">
+          <i class="ion ion-ios-search text-large align-middle"></i>
+          <span class="navbar-search-input">
+              <input type="text" class="form-control mx-2" placeholder="Search..." style="width:140px">
+              <a href="#" class="navbar-search-cancel">×</a>
+            </span>
+        </label>
+      </div>
+    </div>
+
+  </div>
+</nav>
+<hr class="mt-0 mb-0">
+<!-- / Nav -->
+
+<!-- Subnav -->
+<div id="blog-subnav-wrapper">
+  <nav id="blog-subnav" class="navbar navbar-expand-lg bg-white">
+    <div class="container px-3">
+      <div class="nav navbar-nav flex-shrink-1 flex-row align-items-center mx-lg-auto">
+        <a class="nav-item nav-link mr-2 ml-lg-2"
+           [routerLink]="[ '/podcast' ]"
+           routerLinkActive="active">PODCAST</a>
+        <a class="nav-item nav-link mx-2"
+           [routerLink]="[ '/blog/cinema' ]"
+           routerLinkActive="active">CINEMA</a>
+        <a class="nav-item nav-link mx-2"
+           [routerLink]="[ '/blog/series' ]"
+           routerLinkActive="active">SÉRIES</a>
+        <a class="nav-item nav-link mx-2"
+           [routerLink]="[ '/blog/games' ]"
+           routerLinkActive="active">GAMES</a>
+        <a class="nav-item nav-link mx-2"
+           [routerLink]="[ '/blog/hqs' ]"
+           routerLinkActive="active">HQs</a>
+        <a class="nav-item nav-link mx-2"
+           [routerLink]="[ '/' ]"
+           routerLinkActive="active">SOBRE</a>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- / Subnav -->

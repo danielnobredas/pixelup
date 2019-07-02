@@ -1,7 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { LayoutModule } from './layout/layout.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -20,6 +19,7 @@ import { MediumComponent } from './medium/medium.component';
 import { SeriesComponent } from './medium/series/series.component';
 import { GamesComponent } from './medium/games/games.component';
 import { HqsComponent } from './medium/hqs/hqs.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 registerLocaleData(localePt);
 
@@ -35,11 +35,11 @@ registerLocaleData(localePt);
     SeriesComponent,
     GamesComponent,
     HqsComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LayoutModule,
     HttpClientModule,
     BrowserAnimationsModule,
     SafePipeModule

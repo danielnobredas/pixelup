@@ -20,6 +20,7 @@ import { SeriesComponent } from './medium/series/series.component';
 import { GamesComponent } from './medium/games/games.component';
 import { HqsComponent } from './medium/hqs/hqs.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 registerLocaleData(localePt);
 
@@ -42,7 +43,8 @@ registerLocaleData(localePt);
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    SafePipeModule
+    SafePipeModule,
+    NgbModule
   ],
   providers: [
           { provide: LOCALE_ID, useValue: 'pt' },

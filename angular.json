@@ -35,7 +35,10 @@
               "src/vendor/styles/colors.scss",
               "src/vendor/styles/uikit.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {

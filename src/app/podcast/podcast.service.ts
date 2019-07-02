@@ -9,6 +9,7 @@ export class PodcastService {
   apiURL = 'https://api.simplecast.com/';
   private auth_token = 'eyJhcGlfa2V5IjoiYWIwMDI3NDMzZDUyMzNmYWFhMTcwZjI4ZDBjNjY2ODIifQ==';
   private podcast_id = '4385c37e-4e30-4b72-a071-2833267bacaa';
+  episodes = [];
 
   constructor(private http: HttpClient) {
   }
@@ -30,6 +31,15 @@ export class PodcastService {
   getEpisodes() {
     return this.http
       .get(this.apiURL + '/podcasts/' + this.podcast_id + '/episodes?limit=30', {headers: this.getHeaders()});
+  }
+
+
+  getLatestEpisodes() {
+    return this.http
+      .get(this.apiURL + '/podcasts/' + this.podcast_id + '/episodes?limit=5', {headers: this.getHeaders()})
+      .subscribe(data => {
+        this.episodes = data['collection'];
+      });
   }
 
   // HttpClient API get() method => Fetch episode

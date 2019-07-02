@@ -8,10 +8,7 @@ export class MediumService {
   // Define API
   apiURL = 'https://api.rss2json.com/v1/api.json?rss_url=';
   mediumUrl = 'https://medium.com/feed/portalpixelup/';
-  postsCinema;
-  postsSeries;
-  postsGames;
-  postsHQs;
+  posts;
 
   constructor(private http: HttpClient) {
   }
@@ -20,16 +17,27 @@ export class MediumService {
    Methods for consuming Medium Feed API
   =========================================*/
 
+  getLatetsPosts() {
+    fetch(this.apiURL + this.mediumUrl)
+      .then((res) => res.json())
+      .then((data) => {
+        // Filter the array
+        const res = data.items; // This is an array with the content. No feed, no info about author etc..
+        this.posts = res.filter(item => item.categories.length > 0); // That's the main trick* !
+
+        return this.posts;
+      });
+  }
+
   getPostsCinema() {
     fetch(this.apiURL + this.mediumUrl + '/tagged/cinema')
       .then((res) => res.json())
       .then((data) => {
         // Filter the array
         const res = data.items; // This is an array with the content. No feed, no info about author etc..
-        this.postsCinema = res.filter(item => item.categories.length > 0); // That's the main trick* !
-        console.log(this.postsCinema);
+        this.posts = res.filter(item => item.categories.length > 0); // That's the main trick* !
 
-        return this.postsCinema;
+        return this.posts;
       });
   }
 
@@ -39,10 +47,9 @@ export class MediumService {
       .then((data) => {
         // Filter the array
         const res = data.items; // This is an array with the content. No feed, no info about author etc..
-        this.postsSeries = res.filter(item => item.categories.length > 0); // That's the main trick* !
-        console.log(this.postsSeries);
+        this.posts = res.filter(item => item.categories.length > 0); // That's the main trick* !
 
-        return this.postsSeries;
+        return this.posts;
       });
   }
 
@@ -52,10 +59,9 @@ export class MediumService {
       .then((data) => {
         // Filter the array
         const res = data.items; // This is an array with the content. No feed, no info about author etc..
-        this.postsGames = res.filter(item => item.categories.length > 0); // That's the main trick* !
-        console.log(this.postsGames);
+        this.posts = res.filter(item => item.categories.length > 0); // That's the main trick* !
 
-        return this.postsGames;
+        return this.posts;
       });
   }
 
@@ -65,10 +71,9 @@ export class MediumService {
       .then((data) => {
         // Filter the array
         const res = data.items; // This is an array with the content. No feed, no info about author etc..
-        this.postsHQs = res.filter(item => item.categories.length > 0); // That's the main trick* !
-        console.log(this.postsHQs);
+        this.posts = res.filter(item => item.categories.length > 0); // That's the main trick* !
 
-        return this.postsHQs;
+        return this.posts;
       });
   }
 

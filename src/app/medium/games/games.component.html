@@ -1,6 +1,6 @@
 <div class="container px-3">
   <div class="row justify-content-between">
-    <div class="col-md-6 pr-lg-4 mb-4 mb-lg-5" *ngFor="let post of mediumService.postsGames">
+    <div class="col-md-6 pr-lg-4 mb-4 mb-lg-5" *ngFor="let post of mediumService.posts">
       <a href="#" class="ui-rect-50 d-block ui-rect ui-bg-cover"
          [style]="domSanitizer.bypassSecurityTrustStyle('background-image: url(' + post.thumbnail + ')')"></a>
       <div class="bg-white p-4">

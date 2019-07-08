@@ -12,11 +12,8 @@ import { HqsComponent } from './medium/hqs/hqs.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'podcast', component: HomeComponent, children: [
-      { path: '', component: PodcastListComponent },
-      { path: 'podcast/:slug', component: PodcastDetailsComponent}
-    ]
-  },
+  { path: 'podcast', component: PodcastListComponent },
+  { path: 'podcast/:slug', component: PodcastDetailsComponent},
   { path: 'blog', component: HomeComponent, children: [
       { path: 'cinema', component: CinemaComponent },
       { path: 'series', component: SeriesComponent},

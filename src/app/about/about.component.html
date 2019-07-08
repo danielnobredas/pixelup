@@ -1,0 +1,35 @@
+<div class="container bg-white mt-3">
+  <div class="col-md-10 col-lg-8 col-xl-7 text-center p-5 mx-auto">
+    <h1 class="display-4 text-center">Pixel Team</h1>
+    <div class="lead text-muted pb-3 mt-4">
+      Lorem ipsum dolor sit amet, ad eam consul vituperata. Cum assum
+      inimicus an, his ne liber aeterno debitis. Te his iudico tollit
+      efficiendi.
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 p-4" *ngFor="let member of teamData">
+      <div class="media">
+        <img [src]="'assets/images/team/' + member.avatar" class="d-block ui-w-80 rounded-circle mr-4" alt>
+        <div class="media-body">
+          <h5 class="font-weight-bold mb-2">{{member.name}}</h5>
+          <div class="text-light small mb-2">"{{ member.quote }}"</div>
+          <div class="ui-company-text text-muted">
+            <a *ngIf="member.twitter"
+               href="https://twitter.com/{{ member.twitter }}" target="_blank"
+               class="text-twitter mr-3"><span class="ion ion-logo-twitter"></span></a>
+            <a *ngIf="member.instagram"
+               href="https://instagram.com/{{ member.instagram }}" target="_blank"
+               class="text-instagram mr-3"><span class="ion ion-logo-instagram"></span></a>
+            <a *ngIf="member.facebook"
+               href="https://facebook.com/{{ member.facebook }}" target="_blank"
+               class="text-facebook"><span class="ion ion-logo-facebook"></span></a>
+            <a *ngIf="member.youtube"
+               href="https://youtube.com/channel/{{ member.youtube }}" target="_blank"
+               class="text-youtube"><span class="ion ion-logo-youtube"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- / .row -->
+</div>

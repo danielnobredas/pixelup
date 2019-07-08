@@ -21,6 +21,7 @@ import { GamesComponent } from './medium/games/games.component';
 import { HqsComponent } from './medium/hqs/hqs.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AboutComponent } from './about/about.component';
 
 registerLocaleData(localePt);
 
@@ -37,6 +38,7 @@ registerLocaleData(localePt);
     GamesComponent,
     HqsComponent,
     NavbarComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

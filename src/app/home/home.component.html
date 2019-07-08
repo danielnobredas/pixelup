@@ -17,7 +17,7 @@
     <div class="col">
       <div class="row">
 
-        <div class="col-lg-6 pr-xl-4 mb-5" *ngFor="let post of mediumService.posts">
+        <div class="col-lg-4 pr-xl-4 mb-5" *ngFor="let post of mediumService.posts">
           <a href="#" class="d-block ui-rect ui-rect-67 ui-bg-cover mb-3"
              [style]="domSanitizer.bypassSecurityTrustStyle('background-image: url(' + post.thumbnail + ')')"></a>
           <div class="text-center text-success small font-weight-bold text-uppercase mb-2">{{ post.categories }}</div>
@@ -54,108 +54,6 @@
       </ul>
     </div>
     <!-- / Articles -->
-
-    <!-- Side content -->
-    <div class="col-lg-4 pl-xl-5">
-
-      <div class="bg-lighter p-4 mb-4">
-        <h6 class="small font-weight-bold mb-2">SUBSCRIBE</h6>
-        <hr class="blog-separator border-primary">
-        <p class="text-muted">
-          Enter your email address to subscribe to this blog and receive notifications of new posts by email.
-        </p>
-        <div class="form-group">
-          <input type="text" class="form-control rounded-0" placeholder="Enter your email address">
-        </div>
-        <button type="button" class="btn btn-primary btn-block rounded-0">Subscribe</button>
-      </div>
-
-      <div class="ui-bordered p-4 mb-4">
-        <h6 class="small font-weight-bold mb-2">POPULAR POSTS</h6>
-        <hr class="blog-separator border-primary">
-        <div class="media mb-3">
-          <div class="ui-w-40">
-            <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/9.jpg');"></div>
-          </div>
-          <div class="media-body ml-3">
-            <div class="mb-1">
-              <a href="#" class="link-animated text-dark">Comment On The Importance Of Human Life</a>
-            </div>
-            <div class="text-light text-tiny"><a href="#" class="text-light">KENNETH FRAZIER</a> &nbsp;\&nbsp; MAY 21, 2018</div>
-          </div>
-        </div>
-        <div class="media mb-3">
-          <div class="ui-w-40">
-            <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/10.jpg');"></div>
-          </div>
-          <div class="media-body ml-3">
-            <div class="mb-1">
-              <a href="#" class="link-animated text-dark">Les Houches The Hidden Gem Of The Chamonix Valley</a>
-            </div>
-            <div class="text-light text-tiny"><a href="#" class="text-light">ALICE HAMPTON</a> &nbsp;\&nbsp; MAY 5, 2018</div>
-          </div>
-        </div>
-        <div class="media mb-3">
-          <div class="ui-w-40">
-            <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/11.jpg');"></div>
-          </div>
-          <div class="media-body ml-3">
-            <div class="mb-1">
-              <a href="#" class="link-animated text-dark">Cheap Romantic Vacations</a>
-            </div>
-            <div class="text-light text-tiny"><a href="#" class="text-light">ARTHUR DUNCAN</a> &nbsp;\&nbsp; APRIL 19, 2018</div>
-          </div>
-        </div>
-        <div class="media mb-3">
-          <div class="ui-w-40">
-            <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/12.jpg');"></div>
-          </div>
-          <div class="media-body ml-3">
-            <div class="mb-1">
-              <a href="#" class="link-animated text-dark">Big Savings On Gas While You Travel</a>
-            </div>
-            <div class="text-light text-tiny"><a href="#" class="text-light">BELLE ROSS</a> &nbsp;\&nbsp; APRIL 9, 2018</div>
-          </div>
-        </div>
-        <div class="media">
-          <div class="ui-w-40">
-            <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/13.jpg');"></div>
-          </div>
-          <div class="media-body ml-3">
-            <div class="mb-1">
-              <a href="#" class="link-animated text-dark">Get Around Easily With A New York Limousine Service</a>
-            </div>
-            <div class="text-light text-tiny"><a href="#" class="text-light">MAY GIBSON</a> &nbsp;\&nbsp; MARCH 28, 2018</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="ui-bordered p-4 mb-4">
-        <h6 class="small font-weight-bold mb-2">ARCHIVE</h6>
-        <hr class="blog-separator border-primary">
-        <div class="mb-2">
-          <a href="#" class="text-body">2018 <span class="text-muted">(10)</span></a>
-        </div>
-        <div class="mb-2">
-          <a href="#" class="text-body">2017 <span class="text-muted">(26)</span></a>
-        </div>
-        <div>
-          <a href="#" class="text-body">2016 <span class="text-muted">(7)</span></a>
-        </div>
-      </div>
-
-      <div class="ui-bordered p-4 mb-4">
-        <h6 class="small font-weight-bold mb-2">STAY CONNECTED</h6>
-        <hr class="blog-separator border-primary">
-        <div class="d-flex flex-wrap">
-          <a href="#" class="icon-btn d-block bg-twitter text-center text-white mr-1 mb-1"><i class="ion ion-logo-twitter"></i></a>
-          <a href="#" class="icon-btn d-block bg-facebook text-center text-white mr-1 mb-1"><i class="ion ion-logo-facebook"></i></a>
-          <a href="#" class="icon-btn d-block bg-instagram text-center text-white mr-1 mb-1"><i class="ion ion-logo-instagram"></i></a>
-        </div>
-      </div>
-
-    </div>
-    <!-- / Side content -->
 
   </div>
 </div>

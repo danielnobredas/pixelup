@@ -9,7 +9,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 })
 export class HqsComponent implements OnInit {
 
-  constructor(private mediumService: MediumService, private domSanitizer: DomSanitizer) { }
+  constructor(public mediumService: MediumService, private domSanitizer: DomSanitizer) { }
 
   ngOnInit() {
     this.mediumService.getPostsHQs();

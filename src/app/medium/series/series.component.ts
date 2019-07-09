@@ -9,7 +9,7 @@ import {MediumService} from '../medium.service';
 })
 export class SeriesComponent implements OnInit {
 
-  constructor(private mediumService: MediumService, private domSanitizer: DomSanitizer) {
+  constructor(public mediumService: MediumService, private domSanitizer: DomSanitizer) {
   }
 
   ngOnInit() {

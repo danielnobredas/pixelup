@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private domSanitizer: DomSanitizer,
-    private mediumService: MediumService,
+    public mediumService: MediumService,
     private podcastService: PodcastService) {
   }
 

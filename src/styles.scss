@@ -20,6 +20,31 @@
   }
 }
 
+// *******************************************************************************
+// * Scrollbar customization[
+
+
+body::-webkit-scrollbar {
+  position: absolute;
+  right: 0;
+  width: 1em;
+}
+body::-webkit-scrollbar-track {
+  opacity: 0;
+}
+body::-webkit-scrollbar-thumb {
+background-color: darkgrey;
+outline: 1px solid slategrey;
+}
+
+// *******************************************************************************
+// * Background-gradient
+
+.bg-gradient-pixel-up {
+  background-image: linear-gradient(to right, #F63952, #FF8A36);
+}
+
+
 // Fix horizontal scrollbar issue when .dropdown-menu-right element is shown
 .layout-wrapper {
   overflow: hidden;
@@ -179,3 +204,4 @@ ngb-accordion .card-header .btn.btn-link {
 ngb-typeahead-window .dropdown-item {
   cursor: pointer;
 }
+

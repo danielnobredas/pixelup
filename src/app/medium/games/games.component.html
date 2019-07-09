@@ -2,7 +2,7 @@
   <div class="row justify-content-between">
     <div class="col-md-6 pr-lg-4 mb-4 mb-lg-5" *ngFor="let post of mediumService.posts">
       <a href="#" class="ui-rect-50 d-block ui-rect ui-bg-cover"
-         [style]="domSanitizer.bypassSecurityTrustStyle('background-image: url(' + post.thumbnail + ')')"></a>
+        [style]="domSanitizer.bypassSecurityTrustStyle('background-image: url(' + post.thumbnail + ')')"></a>
       <div class="bg-white p-4">
         <div class="text-muted text-tiny mb-2">escrito por {{ post.author }}</div>
         <h3 class="font-weight-bold">
@@ -11,9 +11,10 @@
         <div class="text-muted small">
           {{ post.pubDate }}
         </div>
-        <button type="button" class="btn btn-outline-primary btn-sm rounded-0 font-weight-semibold mt-4">
+        <a class="btn btn-outline-primary btn-sm rounded-0 font-weight-semibold mt-4" [href]="post.link"
+          target="_blank">
           LER
-        </button>
+        </a>
       </div>
     </div>
   </div>

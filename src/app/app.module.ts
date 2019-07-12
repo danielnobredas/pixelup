@@ -8,6 +8,7 @@ import { PodcastComponent } from './podcast/podcast.component';
 import { PodcastListComponent } from './podcast/podcast-list/podcast-list.component';
 import { PodcastDetailsComponent } from './podcast/podcast-details/podcast-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SwiperModule } from 'ngx-swiper-wrapper';
 
 import { LOCALE_ID } from '@angular/core';
 import localePt from '@angular/common/locales/pt';
@@ -48,7 +49,8 @@ registerLocaleData(localePt);
     HttpClientModule,
     BrowserAnimationsModule,
     SafePipeModule,
-    NgbModule
+    NgbModule,
+    SwiperModule
   ],
   providers: [
           { provide: LOCALE_ID, useValue: 'pt' },

@@ -1,4 +1,4 @@
-:host /deep/ { @import 'node_modules/swiper/dist/css/swiper'; }
+:host /deep/ { @import '~node_modules/swiper/dist/css/swiper'; }
 
 :host /deep/ .swiper-container {
   overflow: hidden !important;

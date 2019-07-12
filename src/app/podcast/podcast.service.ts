@@ -36,7 +36,7 @@ export class PodcastService {
 
   getLatestEpisodes() {
     return this.http
-      .get(this.apiURL + '/podcasts/' + this.podcast_id + '/episodes?limit=5', {headers: this.getHeaders()})
+      .get(this.apiURL + '/podcasts/' + this.podcast_id + '/episodes?limit=10', {headers: this.getHeaders()})
       .subscribe(data => {
         this.episodes = data['collection'];
       });

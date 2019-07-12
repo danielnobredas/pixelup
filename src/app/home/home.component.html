@@ -12,7 +12,6 @@
 
 <div class="container">
   <div class="row mt-5">
-
     <!-- Articles -->
     <div class="col">
       <div class="row">
@@ -22,38 +21,31 @@
              [style]="domSanitizer.bypassSecurityTrustStyle('background-image: url(' + post.thumbnail + ')')"></a>
           <div class="text-center text-success small font-weight-bold text-uppercase mb-2">{{ post.categories }}</div>
           <h4 class="text-center mb-2"><a href="#" class="link-animated text-dark">{{ post.title }}</a></h4>
-          <div class="text-center text-light text-tiny mb-3"><a href="#" class="text-light text-uppercase">{{ post.author }}</a> &nbsp;\&nbsp; {{ post.pubDate }}</div>
+          <div class="text-center text-light text-tiny mb-3">
+            <a href="#"
+               class="text-light text-uppercase">{{ post.author }}</a>
+            &nbsp;\&nbsp; {{ post.pubDate }}</div>
           <div class="font-secondary text-big">
           </div>
         </div>
 
       </div>
-
-      <ul class="pagination justify-content-center mt-4 mb-5">
-        <li class="page-item disabled">
-          <a class="page-link rounded-0" href="#">«</a>
-        </li>
-        <li class="page-item active">
-          <a class="page-link rounded-0" href="#">1</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link rounded-0" href="#">2</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link rounded-0" href="#">3</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link rounded-0" href="#">4</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link rounded-0" href="#">5</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link rounded-0" href="#">»</a>
-        </li>
-      </ul>
     </div>
     <!-- / Articles -->
-
   </div>
+
 </div>
+
+<!-- Multiple slides -->
+<section class="py-5 bg-dark">
+  <div class="container">
+    <div [swiper]="swiperMultipleSlides" class="swiper-container w-100">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let episode of podcastService.episodes">
+          <img [src]="episode.image_url" class="img-thumbnail" alt="">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>

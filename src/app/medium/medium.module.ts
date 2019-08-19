@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { CinemaComponent } from './cinema/cinema.component';
-import { GamesComponent } from './games/games.component';
-import { HqsComponent } from './hqs/hqs.component';
-import { SeriesComponent } from './series/series.component';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {CinemaComponent} from './cinema/cinema.component';
+import {GamesComponent} from './games/games.component';
+import {HqsComponent} from './hqs/hqs.component';
+import {SeriesComponent} from './series/series.component';
 
 @NgModule({
   declarations: [
@@ -22,4 +22,5 @@ import { SeriesComponent } from './series/series.component';
     SeriesComponent
   ]
 })
-export class MediumModule {}
+export class MediumModule {
+}

@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.mediumService.getLatetsPosts();
     this.podcastService.getLatestEpisodes();
-
   }
 
   ngAfterViewInit(): void {

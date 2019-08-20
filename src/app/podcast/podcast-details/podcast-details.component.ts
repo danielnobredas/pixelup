@@ -6,15 +6,18 @@ import {PodcastService} from '../podcast.service';
   templateUrl: './podcast-details.component.html',
   styleUrls: ['./podcast-details.component.css']
 })
+
 export class PodcastDetailsComponent implements OnInit {
 
+  // @Input() episode: PodcastService;
+  episode: Object[] = [];
+
   constructor(private podcastService: PodcastService) {
+    podcastService.getEpisode('magic-the-gathering-ft-top-deck')
+      .subscribe(episode => this.episode = episode);
   }
 
-  @Input() episode: PodcastService;
-
   ngOnInit() {
-
   }
 
 }

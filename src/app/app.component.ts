@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Router, Event as RouterEvent, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
-import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +6,4 @@ import { AppService } from './app.service';
   styles: [':host { display: block; }']
 })
 export class AppComponent {
-  constructor(private router: Router, private appService: AppService) {
-
-  }
 }

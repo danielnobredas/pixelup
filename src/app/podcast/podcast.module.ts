@@ -1,8 +1,10 @@
 import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {RouterModule} from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
+
 import {PodcastListComponent} from './podcast-list/podcast-list.component';
 import {PodcastDetailsComponent} from './podcast-details/podcast-details.component';
-import {BrowserModule} from '@angular/platform-browser';
-import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,8 @@ import {RouterModule} from '@angular/router';
     PodcastDetailsComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
+    HttpClientModule,
     RouterModule
   ],
   exports: [

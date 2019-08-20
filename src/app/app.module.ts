@@ -6,6 +6,7 @@ import {SafePipeModule} from 'safe-pipe';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SwiperModule} from 'ngx-swiper-wrapper';
+import {ErrorsModule} from './errors/errors.module';
 import {MediumModule} from './medium/medium.module';
 import {PodcastModule} from './podcast/podcast.module';
 
@@ -31,7 +32,7 @@ registerLocaleData(localePt);
     PodcastComponent,
     NavbarComponent,
     AboutComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +43,8 @@ registerLocaleData(localePt);
     NgbModule,
     SwiperModule,
     MediumModule,
-    PodcastModule
+    PodcastModule,
+    ErrorsModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'pt'},

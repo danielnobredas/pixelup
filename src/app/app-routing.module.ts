@@ -9,6 +9,7 @@ import {SeriesComponent} from './medium/series/series.component';
 import {GamesComponent} from './medium/games/games.component';
 import {HqsComponent} from './medium/hqs/hqs.component';
 import {AboutComponent} from './about/about.component';
+import {NotFoundComponent} from './errors/not-found/not-found.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
     ]
   },
   {path: 'about', component: AboutComponent},
+  {path: '**', component: NotFoundComponent}
 ];
 
 

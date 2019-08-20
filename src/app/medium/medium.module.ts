@@ -1,5 +1,7 @@
 import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import {CommonModule} from '@angular/common';
+import {HttpClientModule} from '@angular/common/http';
+
 import {CinemaComponent} from './cinema/cinema.component';
 import {GamesComponent} from './games/games.component';
 import {HqsComponent} from './hqs/hqs.component';
@@ -13,7 +15,8 @@ import {SeriesComponent} from './series/series.component';
     SeriesComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
+    HttpClientModule
   ],
   exports: [
     CinemaComponent,

@@ -13,8 +13,9 @@ export class PodcastListComponent implements OnInit {
 
   episodeList: any = [];
 
-  constructor(private podcastService: PodcastService, private domSanitizer: DomSanitizer) {
-  }
+  constructor(private podcastService: PodcastService,
+              private domSanitizer: DomSanitizer
+  ) { }
 
   ngOnInit() {
     this.podcastService.getEpisodes()

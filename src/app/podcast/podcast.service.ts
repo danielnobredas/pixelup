@@ -28,21 +28,21 @@ export class PodcastService {
   // HttpClient API get() method => Fetch episodes list
   getEpisodes() {
     return this.http
-      .get<Object[]>(apiURL + '/podcasts/' + podcast_id + '/episodes?limit=12', {headers: this.getHeaders()});
+      .get<Object[]>(apiURL + 'podcasts/' + podcast_id + '/episodes?limit=12', {headers: this.getHeaders()});
   }
 
   getLatestEpisodes() {
     return this.http
-      .get<Object[]>(apiURL + '/podcasts/' + podcast_id + '/episodes?limit=5', {headers: this.getHeaders()})
+      .get<Object[]>(apiURL + 'podcasts/' + podcast_id + '/episodes?limit=5', {headers: this.getHeaders()})
       .subscribe(data => {
         this.episodes = data['collection'];
       });
   }
 
   // HttpClient API get() method => Fetch episode
-  getEpisode(slug: string) {
+  getEpisode(episode_id: string) {
     return this.http
-      .get<Object[]>(apiURL + '/episodes/' + slug, {headers: this.getHeaders()});
+      .get<Object[]>(apiURL + 'episodes/' + episode_id, {headers: this.getHeaders()});
   }
 
   getEpisodeDownload(link) {

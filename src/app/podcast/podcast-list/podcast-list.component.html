@@ -32,25 +32,27 @@
   </div>
 </div>
 <hr>
-<div class="row">
-  <div class="col-xs-12 col-md-4 col-lg-3" *ngFor="let episode of episodeList">
-    <div *ngIf="episode.published_at" class="card mb-3">
-      <a [routerLink]="[ episode.slug ]">
-        <img [src]="episode.image_url" class="card-img-top" alt="Capa do Episódio">
-      </a>
-      <iframe height="52px" width="100%"
-              frameborder="no" scrolling="no" seamless
-              [src]="domSanitizer.bypassSecurityTrustResourceUrl('https://player.simplecast.com/'+ episode.id + '?dark=false')">
-      </iframe>
-      <div class="card-body">
-        <h4 class="card-title">#{{ (episode.number ? episode.number : 'BONUS') + ' | ' + episode.title }}</h4>
-        <p class="card-text">{{ episode.description | slice: 0:140 }}... <a href="">ler mais</a></p>
-      </div>
-      <div class="card-footer">
-        <p class="card-text">
-          <small class="text-muted">{{ episode.published_at| date: fullDate }}</small>
-        </p>
+<section class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-4 col-lg-3" *ngFor="let episode of episodeList">
+      <div *ngIf="episode.published_at" class="card mb-3">
+        <a [routerLink]="[ episode.id ]">
+          <img [src]="episode.image_url" class="card-img-top" alt="Capa do Episódio">
+        </a>
+        <iframe height="52px" width="100%"
+                frameborder="no" scrolling="no" seamless
+                [src]="domSanitizer.bypassSecurityTrustResourceUrl('https://player.simplecast.com/'+ episode.id + '?dark=false')">
+        </iframe>
+        <div class="card-body">
+          <h4 class="card-title">#{{ (episode.number ? episode.number : 'BONUS') + ' | ' + episode.title }}</h4>
+          <p class="card-text">{{ episode.description | slice: 0:140 }}... <a href="">ler mais</a></p>
+        </div>
+        <div class="card-footer">
+          <p class="card-text">
+            <small class="text-muted">{{ episode.published_at| date: fullDate }}</small>
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>

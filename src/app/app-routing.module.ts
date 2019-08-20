@@ -17,7 +17,7 @@ const routes: Routes = [
   {
     path: 'podcast', children: [
       {path: '', component: PodcastListComponent},
-      {path: 'podcast/:slug', component: PodcastDetailsComponent}
+      {path: ':episode_id', component: PodcastDetailsComponent}
     ]
   },
   {

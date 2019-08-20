@@ -45,8 +45,4 @@ export class PodcastService {
       .get<Object[]>(apiURL + 'episodes/' + episode_id, {headers: this.getHeaders()});
   }
 
-  getEpisodeDownload(link) {
-    return this.http
-      .get(link, {headers: this.getHeaders()});
-  }
 }

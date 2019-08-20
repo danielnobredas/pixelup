@@ -1,3 +1,24 @@
-<p>
-  {{ episode.title }}
-</p>
+
+<div class="portfolio-block container px-3">
+
+  <img [src]="episode.image_url" class="img-thumbnail ui-w-140" alt="Capa do Episódio">
+
+  <div class="row justify-content-between">
+    <div class="col-lg-5">
+      <div class="small mb-4">
+        <a href="#" class="text-muted font-weight-semibold">{{ episode.published_at| date: fullDate }}</a>
+      </div>
+      <h1 class="mb-4">
+        {{ episode.title }}
+      </h1>
+      <div class="small">
+        <a href="#" class="text-body"># {{ episode.number }}</a>
+      </div>
+      <div>Inserir player aqui</div>
+    </div>
+    <div class="col-lg-6 pt-5 pt-lg-0">
+      <p>{{ episode.long_description }}</p>
+    </div>
+  </div>
+
+</div>

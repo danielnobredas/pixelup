@@ -1,6 +1,7 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+
 import {PodcastService} from '../podcast.service';
-import {DomSanitizer} from '@angular/platform-browser';
+import {Episode} from '../episode';
 
 @Component({
   selector: 'app-podcast-list',
@@ -9,32 +10,17 @@ import {DomSanitizer} from '@angular/platform-browser';
 })
 export class EpisodesListComponent implements OnInit {
 
-  @Output() recentEpisode = new EventEmitter();
+  episodes: Episode[] = [];
 
-  episodeList: any = [];
-
-  constructor(private podcastService: PodcastService,
-              private domSanitizer: DomSanitizer
+  constructor(
+    private podcastService: PodcastService,
   ) { }
 
   ngOnInit() {
     this.podcastService.getEpisodes()
       .subscribe(data => {
-        this.episodeList = data['collection'];
-        console.log(this.episodeList = data['collection']);
-        this.episodeList.forEach(episode => {
-          if (episode.published_at) {
-            this.podcastService.getEpisodeDownload(episode.analytics.href)
-              .subscribe(datas => {
-                Object.assign(episode, {downloads: datas['total']});
-              });
-          }
-        });
-        this.recentEpisode.emit(this.episodeList[0]);
+        this.episodes = data['collection'];
+        console.log(this.episodes = data['collection']);
       });
-  }
-
-  checkEpisode(episode) {
-    return episode.published_at !== undefined;
   }
 }

@@ -15,12 +15,10 @@ import localePt from '@angular/common/locales/pt';
 import {registerLocaleData} from '@angular/common';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
-import {PodcastComponent} from './podcast/podcast.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {AboutComponent} from './about/about.component';
 import {FooterComponent} from './footer/footer.component';
 import {AppService} from './app.service';
-import {MediumComponent} from './medium/medium.component';
 
 registerLocaleData(localePt);
 
@@ -28,8 +26,6 @@ registerLocaleData(localePt);
   declarations: [
     AppComponent,
     HomeComponent,
-    MediumComponent,
-    PodcastComponent,
     NavbarComponent,
     AboutComponent,
     FooterComponent

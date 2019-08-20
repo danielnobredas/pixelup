@@ -4,10 +4,10 @@ import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-podcast-list',
-  templateUrl: './podcast-list.component.html',
-  styleUrls: ['./podcast-list.component.css']
+  templateUrl: './episodes-list.component.html',
+  styleUrls: ['./episodes-list.component.css']
 })
-export class PodcastListComponent implements OnInit {
+export class EpisodesListComponent implements OnInit {
 
   @Output() recentEpisode = new EventEmitter();
 

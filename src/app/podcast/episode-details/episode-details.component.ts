@@ -1,16 +1,15 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PodcastService} from '../podcast.service';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-podcast-details',
-  templateUrl: './podcast-details.component.html',
-  styleUrls: ['./podcast-details.component.css']
+  templateUrl: './episode-details.component.html',
+  styleUrls: ['./episode-details.component.css']
 })
 
-export class PodcastDetailsComponent implements OnInit {
+export class EpisodeDetailsComponent implements OnInit {
 
-  // @Input() episode: PodcastService;
   episode: Object[] = [];
 
   constructor(private podcastService: PodcastService,

@@ -2,8 +2,8 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
 import {HomeComponent} from './home/home.component';
-import {PodcastListComponent} from './podcast/podcast-list/podcast-list.component';
-import {PodcastDetailsComponent} from './podcast/podcast-details/podcast-details.component';
+import {EpisodesListComponent} from './podcast/episodes-list/episodes-list.component';
+import {EpisodeDetailsComponent} from './podcast/episode-details/episode-details.component';
 import {CinemaComponent} from './medium/cinema/cinema.component';
 import {SeriesComponent} from './medium/series/series.component';
 import {GamesComponent} from './medium/games/games.component';
@@ -16,8 +16,8 @@ const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
   {
     path: 'podcast', children: [
-      {path: '', component: PodcastListComponent},
-      {path: ':episode_id', component: PodcastDetailsComponent}
+      {path: '', component: EpisodesListComponent},
+      {path: ':episode_id', component: EpisodeDetailsComponent}
     ]
   },
   {

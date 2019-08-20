@@ -3,13 +3,15 @@ import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 
-import {PodcastListComponent} from './podcast-list/podcast-list.component';
-import {PodcastDetailsComponent} from './podcast-details/podcast-details.component';
+import {EpisodesListComponent} from './episodes-list/episodes-list.component';
+import {EpisodeDetailsComponent} from './episode-details/episode-details.component';
+import { EpisodeCardComponent } from './episodes-list/episode-card/episode-card.component';
 
 @NgModule({
   declarations: [
-    PodcastListComponent,
-    PodcastDetailsComponent
+    EpisodesListComponent,
+    EpisodeDetailsComponent,
+    EpisodeCardComponent
   ],
   imports: [
     CommonModule,
@@ -17,8 +19,8 @@ import {PodcastDetailsComponent} from './podcast-details/podcast-details.compone
     RouterModule
   ],
   exports: [
-    PodcastListComponent,
-    PodcastDetailsComponent
+    EpisodesListComponent,
+    EpisodeDetailsComponent
   ]
 })
 export class PodcastModule {

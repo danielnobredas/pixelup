@@ -1,8 +1,9 @@
+<div class="card ui-bg-cover ui-rect-30 ui-bg-overlay-container border-0 mb-4"
+     [style]="domSanitizer.bypassSecurityTrustStyle('background-image: url(' + episode.image_url + ')')">
+  <div class="ui-bg-overlay bg-dark rounded opacity-25"></div>
+</div>
 
 <div class="portfolio-block container px-3">
-
-  <img [src]="episode.image_url" class="img-thumbnail ui-w-140" alt="Capa do Episódio">
-
   <div class="row justify-content-between">
     <div class="col-lg-5">
       <div class="small mb-4">
@@ -14,11 +15,13 @@
       <div class="small">
         <a href="#" class="text-body"># {{ episode.number }}</a>
       </div>
-      <div>Inserir player aqui</div>
+      <iframe height="200px" width="100%"
+              frameborder="no" scrolling="no" seamless
+              [src]="domSanitizer.bypassSecurityTrustResourceUrl('https://player.simplecast.com/'+ episode.id + '?dark=true')">
+      </iframe>
     </div>
     <div class="col-lg-6 pt-5 pt-lg-0">
       <markdown [data]="episode.long_description"></markdown>
     </div>
   </div>
-
 </div>

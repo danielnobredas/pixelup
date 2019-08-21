@@ -10,7 +10,8 @@
       </iframe>
       <div class="card-body">
         <h4 class="card-title">#{{ (episode.number ? episode.number : 'BONUS') + ' | ' + episode.title }}</h4>
-        <p class="card-text">{{ episode.description | slice: 0:140 }}... <a href="">ler mais</a></p>
+        <p class="card-text">{{ episode.description | slice: 0:140 }}...
+          <a [routerLink]="[ episode.id ]">ler mais</a></p>
       </div>
       <div class="card-footer">
         <p class="card-text">

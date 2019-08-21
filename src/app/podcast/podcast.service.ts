@@ -39,6 +39,14 @@ export class PodcastService {
       });
   }
 
+  getLastEpisode() {
+    return this.http
+      .get<Object[]>(apiURL + 'podcasts/' + podcast_id + '/episodes?limit=1', {headers: this.getHeaders()})
+      .subscribe(data => {
+        this.episodes = data['collection'];
+      });
+  }
+
   // HttpClient API get() method => Fetch episode
   getEpisode(episode_id: string) {
     return this.http

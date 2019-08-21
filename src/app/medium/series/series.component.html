@@ -1,7 +1,7 @@
 <div class="container py-5">
   <div class="row justify-content-between">
     <div class="col-md-4 pr-lg-4 mb-4 mb-lg-5" *ngFor="let post of mediumService.posts">
-      <a href="#" class="ui-rect-50 d-block ui-rect ui-bg-cover"
+      <a [href]="post.link" class="ui-rect-50 d-block ui-rect ui-bg-cover"
          [style]="domSanitizer.bypassSecurityTrustStyle('background-image: url(' + post.thumbnail + ')')"></a>
       <div class="bg-white p-4">
         <div class="text-muted text-tiny mb-2">escrito por {{ post.author }}</div>

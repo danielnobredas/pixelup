@@ -1,4 +1,35 @@
+<div class="jumbotron ui-hero justify-content-center ui-bg-cover ui-bg-overlay-container text-white py-0"
+     [style]="domSanitizer.bypassSecurityTrustStyle('background-image: url(' + podcastService.episodes[0].image_url + ')')">
+  <div class="ui-bg-overlay bg-dark opacity-50"></div>
+
+  <div class="d-flex flex-column w-100 ui-mh-100vh">
+    <div class="container d-flex align-items-center flex-grow-1 py-5">
+      <div class="row flex-basis-100">
+        <div class="w-100 text-center">
+
+          <h1 class="display-4 col-md-8 col-lg-7 col-xl-6 font-weight-bolder px-0 mx-auto mx-auto">
+            Pixel Up #{{ podcastService.episodes[0].number }} {{ podcastService.episodes[0].title }}
+          </h1>
+          <p class="lead col-md-9 col-lg-7 col-xl-6 px-0 pt-3 mx-auto">
+            {{ podcastService.episodes[0].description }}
+          </p>
+
+          <iframe height="200px" width="100%"
+                  frameborder="no" scrolling="no" seamless
+                  [src]="domSanitizer.bypassSecurityTrustResourceUrl(
+                  'https://player.simplecast.com/'+ podcastService.episodes[0].id + '?dark=true')">
+          </iframe>
+
+          <a [routerLink]="[ '/podcast' ]" class="btn btn-lg rounded-pill btn-warning mt-5"><i class="fas fa-headphones-alt"></i>
+            Mais episódios</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container">
+  <h1 class="display-3 mt-5">Últimos Posts <i class="fab fa-medium"></i></h1>
   <div class="row mt-5">
     <!-- Articles -->
     <div class="col">
@@ -19,19 +50,4 @@
     </div>
     <!-- / Articles -->
   </div>
-
 </div>
-
-<!-- Multiple slides -->
-<section class="py-5 bg-dark">
-  <div class="container">
-    <div [swiper]="swiperMultipleSlides" class="swiper-container w-100">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" *ngFor="let episode of podcastService.episodes">
-          <img [src]="episode.image_url" class="img-thumbnail" alt="">
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-</section>

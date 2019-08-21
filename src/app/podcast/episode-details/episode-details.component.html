@@ -7,14 +7,12 @@
   <div class="row justify-content-between">
     <div class="col-lg-5">
       <div class="small mb-4">
-        <a href="#" class="text-muted font-weight-semibold">{{ episode.published_at| date: fullDate }}</a>
+        <p class="text-muted font-weight-semibold">
+          Publicado em {{ episode.published_at| date: fullDate }}</p>
       </div>
       <h1 class="mb-4">
-        {{ episode.title }}
+        #{{ episode.number }} {{ episode.title }}
       </h1>
-      <div class="small">
-        <a href="#" class="text-body"># {{ episode.number }}</a>
-      </div>
       <iframe height="200px" width="100%"
               frameborder="no" scrolling="no" seamless
               [src]="domSanitizer.bypassSecurityTrustResourceUrl('https://player.simplecast.com/'+ episode.id + '?dark=true')">

@@ -3,9 +3,8 @@
     <!-- Articles -->
     <div class="col">
       <div class="row">
-
         <div class="col-lg-4 pr-xl-4 mb-5" *ngFor="let post of mediumService.posts">
-          <a href="#" class="d-block ui-rect ui-rect-67 ui-bg-cover mb-3"
+          <a [href]="post.link" target="_blank" class="d-block ui-rect ui-rect-67 ui-bg-cover mb-3"
              [style]="domSanitizer.bypassSecurityTrustStyle('background-image: url(' + post.thumbnail + ')')"></a>
           <div class="text-center text-success small font-weight-bold text-uppercase mb-2">{{ post.categories }}</div>
           <h4 class="text-center mb-2"><a href="#" class="link-animated text-dark">{{ post.title }}</a></h4>
@@ -16,7 +15,6 @@
           <div class="font-secondary text-big">
           </div>
         </div>
-
       </div>
     </div>
     <!-- / Articles -->

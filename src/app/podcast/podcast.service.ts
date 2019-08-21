@@ -28,7 +28,7 @@ export class PodcastService {
   // HttpClient API get() method => Fetch episodes list
   getEpisodes() {
     return this.http
-      .get<Object[]>(apiURL + 'podcasts/' + podcast_id + '/episodes?limit=12', {headers: this.getHeaders()});
+      .get<Object[]>(apiURL + 'podcasts/' + podcast_id + '/episodes?limit=100', {headers: this.getHeaders()});
   }
 
   getLatestEpisodes() {

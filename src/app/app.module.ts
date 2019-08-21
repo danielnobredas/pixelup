@@ -4,6 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {SafePipeModule} from 'safe-pipe';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgxPaginationModule} from 'ngx-pagination';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SwiperModule, SwiperConfigInterface, SWIPER_CONFIG} from 'ngx-swiper-wrapper';
 import {ErrorsModule} from './errors/errors.module';
@@ -47,6 +48,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     BrowserAnimationsModule,
     SafePipeModule,
     NgbModule,
+    NgxPaginationModule,
     SwiperModule,
     MediumModule,
     PodcastModule,

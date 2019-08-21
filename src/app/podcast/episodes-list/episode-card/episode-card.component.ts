@@ -1,6 +1,7 @@
 import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {Episode} from '../../episode';
 import {DomSanitizer} from '@angular/platform-browser';
+import {PaginationInstance} from 'ngx-pagination';
 
 @Component({
   selector: 'app-episode-card',
@@ -11,6 +12,12 @@ export class EpisodeCardComponent implements OnChanges {
 
   @Input() episodes: Episode[] = [];
   rows: any[] = [];
+
+  public config: PaginationInstance = {
+    id: 'custom',
+    itemsPerPage: 3,
+    currentPage: 1
+  };
 
   constructor(private domSanitizer: DomSanitizer) {
   }

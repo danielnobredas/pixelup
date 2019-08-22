@@ -12,7 +12,7 @@ import {EpisodeDetail} from '../episodeDetail';
 
 export class EpisodeDetailsComponent implements OnInit {
 
-  @Input() episode: EpisodeDetail[] = [];
+  @Input() episode: any = [];
 
   constructor(public podcastService: PodcastService,
               private activatedRoute: ActivatedRoute,

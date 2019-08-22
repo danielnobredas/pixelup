@@ -13,7 +13,7 @@ export class EpisodeDetailsComponent implements OnInit {
 
   episode: Object[] = [];
 
-  constructor(private podcastService: PodcastService,
+  constructor(public podcastService: PodcastService,
               private activatedRoute: ActivatedRoute,
               private domSanitizer: DomSanitizer
   ) { }

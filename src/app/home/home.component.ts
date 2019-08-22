@@ -12,9 +12,9 @@ import {DomSanitizer} from '@angular/platform-browser';
 export class HomeComponent implements OnInit {
 
   constructor(
-    private domSanitizer: DomSanitizer,
+    public domSanitizer: DomSanitizer,
     public mediumService: MediumService,
-    private podcastService: PodcastService) {
+    public podcastService: PodcastService) {
   }
 
   ngOnInit() {

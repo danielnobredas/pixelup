@@ -1,5 +1,6 @@
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Injectable} from '@angular/core';
+import {Episode} from './episode';
 
 // Define API
 const apiURL = 'https://api.simplecast.com/';
@@ -8,7 +9,7 @@ const podcast_id = '4385c37e-4e30-4b72-a071-2833267bacaa';
 
 @Injectable({ providedIn: 'root'})
 export class PodcastService {
-  episodes = [];
+  episodes: Episode[] = [];
 
   constructor(private http: HttpClient) {
   }
@@ -28,12 +29,12 @@ export class PodcastService {
   // HttpClient API get() method => Fetch episodes list
   getEpisodes() {
     return this.http
-      .get<Object[]>(apiURL + 'podcasts/' + podcast_id + '/episodes?limit=100', {headers: this.getHeaders()});
+      .get<Episode[]>(apiURL + 'podcasts/' + podcast_id + '/episodes?limit=100', {headers: this.getHeaders()});
   }
 
   getLatestEpisodes() {
     return this.http
-      .get<Object[]>(apiURL + 'podcasts/' + podcast_id + '/episodes?limit=5', {headers: this.getHeaders()})
+      .get<Episode[]>(apiURL + 'podcasts/' + podcast_id + '/episodes?limit=5', {headers: this.getHeaders()})
       .subscribe(data => {
         this.episodes = data['collection'];
       });
@@ -41,16 +42,13 @@ export class PodcastService {
 
   getLastEpisode() {
     return this.http
-      .get<Object[]>(apiURL + 'podcasts/' + podcast_id + '/episodes?limit=1', {headers: this.getHeaders()})
-      .subscribe(data => {
-        this.episodes = data['collection'];
-      });
+      .get<Episode[]>(apiURL + 'podcasts/' + podcast_id + '/episodes?limit=1', {headers: this.getHeaders()});
   }
 
   // HttpClient API get() method => Fetch episode
   getEpisode(episode_id: string) {
     return this.http
-      .get<Object[]>(apiURL + 'episodes/' + episode_id, {headers: this.getHeaders()});
+      .get<Episode[]>(apiURL + 'episodes/' + episode_id, {headers: this.getHeaders()});
   }
 
 }

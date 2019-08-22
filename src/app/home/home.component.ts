@@ -3,6 +3,7 @@ import {Component, OnInit} from '@angular/core';
 import {PodcastService} from '../podcast/podcast.service';
 import {MediumService} from '../medium/medium.service';
 import {DomSanitizer} from '@angular/platform-browser';
+import {Episode} from '../podcast/episode';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,8 @@ import {DomSanitizer} from '@angular/platform-browser';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  episodes: Episode[] = [];
 
   constructor(
     public domSanitizer: DomSanitizer,
@@ -19,7 +22,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.mediumService.getLatetsPosts();
-    this.podcastService.getLastEpisode();
+    this.podcastService.getLastEpisode()
+      .subscribe(data => {
+        this.episodes = data['collection'];
+        console.log(this.episodes = data['collection']);
+      });
   }
 
 }

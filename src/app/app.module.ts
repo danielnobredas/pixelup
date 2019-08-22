@@ -10,17 +10,12 @@ import {ErrorsModule} from './errors/errors.module';
 import {MediumModule} from './medium/medium.module';
 import {PodcastModule} from './podcast/podcast.module';
 
-import {LOCALE_ID} from '@angular/core';
-import localePt from '@angular/common/locales/pt';
-import {registerLocaleData} from '@angular/common';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {AboutComponent} from './about/about.component';
 import {FooterComponent} from './footer/footer.component';
 import {AppService} from './app.service';
-
-registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -44,8 +39,8 @@ registerLocaleData(localePt);
   ],
   providers: [
     {
-      provide: [LOCALE_ID],
-      useValue: ['pt']
+      provide: [],
+      useValue: []
     },
     AppService,
   ],

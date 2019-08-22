@@ -2,7 +2,6 @@ import {Component, Input, OnInit} from '@angular/core';
 import {PodcastService} from '../podcast.service';
 import {ActivatedRoute} from '@angular/router';
 import {DomSanitizer} from '@angular/platform-browser';
-import {Episode} from '../episode';
 
 @Component({
   selector: 'app-podcast-details',
@@ -12,7 +11,7 @@ import {Episode} from '../episode';
 
 export class EpisodeDetailsComponent implements OnInit {
 
-  @Input() episode: Episode[] = [];
+  @Input() episode: Object[] = [];
 
   constructor(public podcastService: PodcastService,
               private activatedRoute: ActivatedRoute,

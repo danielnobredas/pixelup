@@ -48,7 +48,7 @@ export class PodcastService {
   // HttpClient API get() method => Fetch episode
   getEpisode(episode_id: string) {
     return this.http
-      .get<Episode[]>(apiURL + 'episodes/' + episode_id, {headers: this.getHeaders()});
+      .get<Object[]>(apiURL + 'episodes/' + episode_id, {headers: this.getHeaders()});
   }
 
 }

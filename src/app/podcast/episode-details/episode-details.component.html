@@ -1,5 +1,5 @@
 <div class="card ui-bg-cover ui-rect-30 ui-bg-overlay-container border-0 mb-4"
-     [style]="domSanitizer.bypassSecurityTrustStyle('background-image: url(' + episode.image_url + ')')">
+     [style]="domSanitizer.bypassSecurityTrustStyle('background-image: url(' + episode?.image_url + ')')">
   <div class="ui-bg-overlay bg-dark rounded opacity-25"></div>
 </div>
 
@@ -8,18 +8,18 @@
     <div class="col-lg-5">
       <div class="small mb-4">
         <p class="text-muted font-weight-semibold">
-          Publicado em {{ episode.published_at| date: fullDate }}</p>
+          Publicado em {{ episode?.published_at| date: 'dd/MM/yyyy' }}</p>
       </div>
       <h1 class="mb-4">
-        #{{ episode.number }} {{ episode.title }}
+        #{{ episode?.number }} {{ episode?.title }}
       </h1>
       <iframe height="200px" width="100%"
               frameborder="no" scrolling="no" seamless
-              [src]="domSanitizer.bypassSecurityTrustResourceUrl('https://player.simplecast.com/'+ episode.id + '?dark=true')">
+              [src]="domSanitizer.bypassSecurityTrustResourceUrl('https://player.simplecast.com/'+ episode?.id + '?dark=true')">
       </iframe>
     </div>
     <div class="col-lg-6 pt-5 pt-lg-0">
-      <markdown [data]="episode.long_description"></markdown>
+      <markdown [data]="episode?.long_description"></markdown>
     </div>
   </div>
 </div>

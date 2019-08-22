@@ -140,7 +140,7 @@ $ui-customer-review-line-height: 1.75 !default;
 .ui-window .window-content {
   &:before,
   &:after {
-    content: "";
+    //content: "";
     position: absolute;
     display: block;
   }

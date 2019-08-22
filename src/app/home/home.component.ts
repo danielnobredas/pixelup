@@ -1,3 +1,4 @@
+/* tslint:disable:member-ordering */
 import {Component, OnInit} from '@angular/core';
 import {PodcastService} from '../podcast/podcast.service';
 import {MediumService} from '../medium/medium.service';
@@ -18,7 +19,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.mediumService.getLatetsPosts();
-    this.podcastService.getLatestEpisodes();
+    this.podcastService.getLastEpisode();
   }
 
 }

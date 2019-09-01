@@ -38,10 +38,6 @@ import {AppService} from './app.service';
     ErrorsModule
   ],
   providers: [
-    {
-      provide: [],
-      useValue: []
-    },
     AppService,
   ],
   bootstrap: [AppComponent]
